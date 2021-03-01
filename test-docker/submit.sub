@@ -1,0 +1,19 @@
+universe = docker
+
+# docker image with tag
+docker_image = doori87/hello_world:0.1
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+# output and logs
+output = $(Process).out
+error  = $(Process).err
+log    = $(Process).log
+
+# any machine requirements
+requirements = (Machine == "pllimskhpc3.mskcc.org")
+
+request_memory = 10MB
+
+queue
