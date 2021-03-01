@@ -6,6 +6,7 @@ arguments = gpu 10000
 # ~12 hr, ~24 hr, ~7 days
 +GPUJobLength = "short"
 
+requirements = (Machine == "pllimskhpc3.mskcc.org")
 request_gpus = 1
 request_memory = 1GB
 #request_cpus = 1
@@ -15,5 +16,5 @@ output = $(Cluster)_$(Process).out
 log = $(Cluster)_$(Process).log
 error = $(Cluster)_$(Process).err
 
-queue
+queue 2
 
