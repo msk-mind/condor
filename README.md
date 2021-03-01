@@ -3,6 +3,7 @@ condor template examples
 
 - test/ : simple test with shell script
 - test-gpfs/ : test using input and output files from the shared /gpfs mount
+- test-gpu/ : runs a small python script that uses TF v1, cuda 10.0, and does some matrix calculation.
 
 ## To Run
 

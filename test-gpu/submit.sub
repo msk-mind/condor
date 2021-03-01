@@ -1,0 +1,19 @@
+universe = vanilla
+executable = exec.sh
+arguments = gpu 10000 
+
+# "short", "medium", "long" for jobs lasting
+# ~12 hr, ~24 hr, ~7 days
++GPUJobLength = "short"
+
+request_gpus = 1
+request_memory = 1GB
+#request_cpus = 1
+#request_disk = 10MB
+
+output = $(Cluster)_$(Process).out
+log = $(Cluster)_$(Process).log
+error = $(Cluster)_$(Process).err
+
+queue
+
