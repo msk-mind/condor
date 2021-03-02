@@ -12,8 +12,6 @@ error  = $(Process).err
 log    = $(Process).log
 
 # any machine requirements
-requirements = (Machine == "pllimskhpc3.mskcc.org")
-
-request_memory = 10MB
+# requirements = (Machine == "replace-with-node-name")
 
 queue

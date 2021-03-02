@@ -6,8 +6,10 @@ arguments = gpu 10000
 # ~12 hr, ~24 hr, ~7 days
 +GPUJobLength = "short"
 
-requirements = (Machine == "pllimskhpc3.mskcc.org") && (TotalGpus > 0)
+# machine requirements to match classad
+#requirements = (Machine == "replace-with-node-name") && (TotalGpus > 0)
 
+# resource
 request_gpus = 1
 request_memory = 1GB
 #request_cpus = 1
