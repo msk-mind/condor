@@ -1,0 +1,24 @@
+universe = vanilla
+executable = stardist_detections_gpu.sh
+arguments =  /data/sample_data/HobI20-681330526186.svs /scripts/sample_scripts/stardist_example.groovy
+# "short", "medium", "long" for jobs lasting
+# ~12 hr, ~24 hr, ~7 days
++GPUJobLength = "short"
+
+# machine requirements to match classad
+#requirements = (Machine=="replace-with-node-name-that-has-singularity")  && (TotalGpus > 0)
+
+# resource
+request_gpus = 1
+request_memory = 1GB
+#request_cpus = 1
+#request_disk = 10MB
+
+output = logs/$(Cluster)_$(Process).out
+log = logs/$(Cluster)_$(Process).log
+error = logs/$(Cluster)_$(Process).err
+
+queue 1
+
+
+
