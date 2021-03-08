@@ -1,4 +1,5 @@
 universe = vanilla
+# replace executable with stardist_detections_cpu.sh if you want stardist to run on this slide using cpu
 executable = stardist_detections_gpu.sh
 arguments =  /data/sample_data/HobI20-681330526186.svs /scripts/sample_scripts/stardist_example.groovy
 # "short", "medium", "long" for jobs lasting
