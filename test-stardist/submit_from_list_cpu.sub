@@ -1,0 +1,20 @@
+universe = vanilla
+executable = stardist_detections_cpu.sh
+arguments =  /data/sample_data/$(slide).svs /scripts/sample_scripts/stardist_example.groovy
+# "short", "medium", "long" for jobs lasting
+# ~12 hr, ~24 hr, ~7 days
++GPUJobLength = "short"
+
+# machine requirements to match classad
+requirements = (Machine=="replace-with-node-name-that-has-singularity") 
+
+# resource
+request_memory = 2GB
+#request_cpus = 1
+#request_disk = 10MB
+
+output = logs/multi_cpu/$(Cluster)_$(slide).out
+log = logs/multi_cpu/$(Cluster)_$(slide).log
+error = logs/multi_cpu/$(Cluster)_$(slide).err
+
+queue slide from /gpfs/mskmind_ess/pateld6/work/docker/qupath/data/test_hne_list.txt 
