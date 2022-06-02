@@ -1,0 +1,17 @@
+###################################
+#                                 #
+# Condor submit file for hello.py #
+# file name: hello.sub            #
+###################################
+
+executable      = hello.py
+
+output          = out/hello.$(Cluster).$(Process).out
+error           = err/hello.$(Cluster).$(Process).err
+log             = log/hello.$(Cluster).$(Process).log
+
+# necessary for multinode execution and for use of a shared file system
+Requirements = TARGET.UidDomain == "mskcc.org" && \
+               TARGET.FileSystemDomain == "mskcc.org"
+
+Queue 100
