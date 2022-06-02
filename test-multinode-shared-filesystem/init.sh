@@ -1,2 +1,2 @@
 # create dirs for condor files
-mkdir err out log 
+mkdir -p err out log 
