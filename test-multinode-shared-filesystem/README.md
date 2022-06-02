@@ -27,3 +27,7 @@ $ grep -o "Hello World" output_dir/<NODE_NAME> | wc -l
 
 $ ./clean.sh
 ```
+
+## References:
+https://htcondor.readthedocs.io/en/v8_8/admin-manual/security.html?highlight=nobody#who-jobs-run-as
+https://htcondor.readthedocs.io/en/v8_8/users-manual/submitting-a-job.html#submitting-jobs-using-a-shared-file-system
