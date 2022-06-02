@@ -23,7 +23,7 @@ $ condor_submit hello.sub
 $ condor_q
 
 # on job completion, run for each file/node_name in the output_dir
-$grep -o "Hello World" output_dir/<NODE_NAME> | wc -l
+$ grep -o "Hello World" output_dir/<NODE_NAME> | wc -l
 
-$./clean.sh
+$ ./clean.sh
 ```
