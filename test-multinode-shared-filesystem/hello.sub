@@ -5,6 +5,7 @@
 ###################################
 
 executable      = hello.py
+arguments       = $(scalars) $(learnings)
 
 output          = out/hello.$(Cluster).$(Process).out
 error           = err/hello.$(Cluster).$(Process).err
@@ -14,4 +15,6 @@ log             = log/hello.$(Cluster).$(Process).log
 Requirements = TARGET.UidDomain == "mskcc.org" && \
                TARGET.FileSystemDomain == "mskcc.org"
 
-Queue 100
+#Queue 100
+#Queue scalars from scalars.txt, learnings from learnings.txt
+Queue scalars,learnings from input_enums.txt

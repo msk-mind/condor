@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import os
+import sys
 
 path = 'output_dir'
 
@@ -11,11 +12,13 @@ if not isExist:
   os.makedirs(path)
   print("The out directory is created!")
 
-
+# open file named after nodename where this batch process is running
 file = open(path+'/'+os.uname()[1],'a')
 
-file.write('Hello World! {}'.format(os.uname()))
+# write nodename to file
+file.write('{} {} {} {}\n'.format(sys.argv[0], sys.argv[1], sys.argv[2], os.uname()))
 file.close()
 
+# print to console out
 print(os.uname()[1] +' processed...')
 
