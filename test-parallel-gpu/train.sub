@@ -1,0 +1,15 @@
+universe = parallel
+
+executable = train.sh
+
+output = train.output
+error = train.error
+log = train.log
+
+environment = "MASTER_PORT=12347 WORLD_SIZE=8 RANK=$(Node) NCCL_SOCKET_IFNAME=eth5"
+
+machine_count = 8
+request_cpus = 10
+request_gpus = 1
+request_memory = 20GB
+queue
